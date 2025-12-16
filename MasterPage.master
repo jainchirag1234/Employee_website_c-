@@ -1,0 +1,32 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+<html>
+<head id="Head1" runat="server">
+    <title>Student & Employee Management</title>
+    <link href="Styles/site.css" rel="stylesheet" />
+    
+    <!-- ✅ Head placeholder -->
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+</head>
+<body>
+    <form id="Form1" runat="server">
+        <div>
+            <h1>My Application</h1>
+            <hr />
+            <!-- ✅ Menu -->
+            <asp:Menu ID="NavigationMenu" runat="server" Orientation="Horizontal">
+                <Items>
+                    <asp:MenuItem Text="Home" NavigateUrl="~/Default.aspx" />
+                    <asp:MenuItem Text="Employee" NavigateUrl="~/Employee.aspx" />
+                </Items>
+            </asp:Menu>
+            <hr />
+            
+            <!-- ✅ Main placeholder -->
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+    </form>
+</body>
+</html>
+
